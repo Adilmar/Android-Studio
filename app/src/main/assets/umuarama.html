@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>RU-UFU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile.structure-1.0.1.css"/>
+    <link rel="apple-touch-icon" href="images/launch_icon_57.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="images/launch_icon_72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="images/launch_icon_114.png"/>
+    <link rel="stylesheet" href="jquery.mobile-1.0.1.css"/>
+    <link rel="stylesheet" href="custom.css"/>
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/jquery.mobile-1.0.1.min.js"></script>
+</head>
+<body>
+<div id="choisir_restau" data-role="page" data-add-back-btn="true">
+    <div data-role="header">
+        <h1>Umuarama</h1>
+    </div>
+
+    <div data-role="content">
+
+        <div class="choice_list">
+            <h1>Alerta Prato Delicia da Semana</h1>
+            <p align="center">
+                <iframe src="http://nutec.ufu.br/adilmar/ruufu/umuarama.php"
+                        style="border:0px #FFFFFF none;" name="myiFrame" scrolling="no"
+                        frameborder="1" marginheight="0px" marginwidth="0px" height="100px"
+                        width="150px"></iframe>
+            </p>
+        </div>
+
+        <div class="ui-grid-a" id="restau_infos">
+            <p>&nbsp;</p>
+            <p align="center">
+                <a href="cardapios/umuarama.html" target="_parent"><img
+                        src="images/almoco_umuarama_0.png"></a> <br>
+                <a href="cardapios/umuaramaj.html" target="_parent"><img
+                        src="images/jantar_umuarama_0.png"></a>
+            </p>
+            <p align="center">&nbsp;</p>
+            <p align="center">&nbsp;</p>
+        </div>
+        <!-- /grid-a -->
+        <hr/>
+
+        <div class="ui-grid-a" id="contact_infos">
+            <div class="ui-block-b"></div>
+        </div><!-- /grid-a -->
+        <div id="contact_buttons">
+            <a href="" data-role="button" data-icon="maps"> Localização: </a>
+
+        </div>
+        <hr/>
+
+        <div id="notation">
+
+            <form>
+                <h2>Enquete</h2>
+                </label>
+
+                <iframe src="http://nutec.ufu.br/adilmar/ruufu/enquete/"
+                        style="border:0px #FFFFFF none;" name="myiFrame" scrolling="no"
+                        frameborder="0" marginheight="0px" marginwidth="0px" height="320px"
+                        width="100%"></iframe>
+
+
+            </form>
+        </div>
+
+
+        <script type="text/javascript">
+
+	$( '#restau' ).live( 'pageinit',function(event){
+		var SelectedOptionClass = $('option:selected').attr('class');
+		$('div.ui-select').addClass(SelectedOptionClass);
+		
+		$('#note_utilisateur').live('change', function(){	 
+			$('div.ui-select').removeClass(SelectedOptionClass);
+			
+			SelectedOptionClass = $('option:selected').attr('class');
+			$('div.ui-select').addClass(SelectedOptionClass);		
+			
+		 });
+		
+	  
+	});
+
+
+        </script>
+
+
+    </div>
+
+
+</div><!-- /page -->
+</body>
+</html>

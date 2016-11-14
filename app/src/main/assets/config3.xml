@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.ufu.ru"
+        versionCode="21" 
+        version   = "2.0.1">
+		
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>RU-UFU</name>
+	
+
+    <description>
+      Aplicativo do RU da Universidade Federal de Uberlândia
+    </description>
+
+    <author href="https://facebook.com/adilmarcoelho" email="adilmarcoelho@hotmail.com">
+        Adilmar Coelho Dantas
+    </author>
+	
+	<preference name="stay-in-webview" value="true" /> 
+	
+	
+	<platform name="ios">
+  <preference name="phonegap-version" value="3.9.1" />
+  <preference name="orientation" value="portrait" />
+</platform>
+
+<platform name="android">
+  <preference name="phonegap-version" value="4.0.2" />
+  <preference name="orientation" value="landscape" />
+</platform>
+
+	
+	 <!-- Core plugins -->
+	<gap:plugin name="org.apache.cordova.battery-status" />
+	<gap:plugin name="org.apache.cordova.camera" />
+	<gap:plugin name="org.apache.cordova.media-capture" />
+	<gap:plugin name="org.apache.cordova.console" />
+	<gap:plugin name="org.apache.cordova.contacts" />
+	<gap:plugin name="org.apache.cordova.device" />
+	<gap:plugin name="org.apache.cordova.device-motion" />
+	<gap:plugin name="org.apache.cordova.device-orientation" />
+	<gap:plugin name="org.apache.cordova.dialogs" />
+	<gap:plugin name="org.apache.cordova.file" />
+	<gap:plugin name="org.apache.cordova.file-transfer" />
+	<gap:plugin name="org.apache.cordova.geolocation" />
+	<gap:plugin name="org.apache.cordova.globalization" />
+	
+	<gap:plugin name="org.apache.cordova.media" />
+	<gap:plugin name="org.apache.cordova.network-information" />
+	<gap:plugin name="org.apache.cordova.splashscreen" />
+	<gap:plugin name="org.apache.cordova.vibration" />
+	
+
+	
+	<gap:plugin name="cordova-plugin-inappbrowser" source="npm"/>
+	
+	 <!-- Define app icon for each platform. -->
+    <icon src="icon.png" />
+    <icon src="icon.png"   gap:platform="android"    gap:density="ldpi" />
+    <icon src="icon.png"   gap:platform="android"    gap:density="mdpi" />
+    <icon src="icon.png"  gap:platform="android"    gap:density="hdpi" />
+    <icon src="icon.png"  gap:platform="android"    gap:density="xhdpi" />
+    <icon src="icon.png"         gap:platform="webos" />
+    <icon src="icon.png"  gap:platform="winphone" />
+    <icon src="icon.png" gap:platform="winphone"   gap:role="background" />
+	
+		 <!-- SPLASH SCREENS -->
+<gap:splash src="images/splash.jpg" /> <!-- default 320x480 pixels -->
+<gap:splash src="images/splash1.jpg" gap:platform="android" gap:density="ldpi" /> <!-- 200x320 -->
+<gap:splash src="images/splash2.jpg" gap:platform="android" gap:density="mdpi" /> <!-- 320x480 -->
+<gap:splash src="images/splash3.jpg" gap:platform="android" gap:density="hdpi" /> <!-- 480x800 -->
+<gap:splash src="images/splash4.jpg" gap:platform="android" gap:density="xhdpi" /> <!-- 720x1280 -->
+
+	
+
+</widget>
